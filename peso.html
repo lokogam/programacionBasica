@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>PESO FUERA DE LA TIERRA</title>
+</head>
+
+<body>
+    <h1>tu peso en orto plaenta</h1>
+    <label for="">digita tu peso en la tierra</label>
+    <input id="peso" type="number" value="" /><br>
+    <button onclick="calcularM()">Marte</button>
+    <button onclick="calcularJ()">Jupiter</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function calcularM() {
+        document.getElementById('resultado').innerHTML = '';
+        var peso = $("#peso ").val();
+        var gTierra = 9.8;
+        var gMarte = 3.7;
+        var resul = peso * gMarte / gTierra;
+        document.getElementById('resultado').innerHTML = 'Tu peso en Marte es de ' + parseInt(resul) + ' kilos ';
+    };
+
+    function calcularJ() {
+        document.getElementById('resultado').innerHTML = '';
+        var peso = $("#peso ").val();
+        var gTierra = 9.8;
+        var gJupiter = 24.8;
+        var resul = peso * gJupiter / gTierra;
+        document.getElementById('resultado').innerHTML = 'Tu peso en Jupiter es de ' + parseInt(resul) + ' kilos ';
+    };
+</script>
+
+</html>
